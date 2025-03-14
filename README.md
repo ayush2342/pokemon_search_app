@@ -46,8 +46,6 @@ A Pokémon search application built with **Next.js (App Router)** and **Tailwind
  ┣ 📂 public               # Static assets
  ┣ 📂 types
  ┃ ┣ 📜 pokemon.ts         # TypeScript types for Pokémon
- ┣ 📂 utils
- ┃ ┣ 📜 api.ts             # API functions for fetching data
  ┣ 📜 .gitignore           # Files ignored by Git
  ┣ 📜 next-env.d.ts        # TypeScript environment variables
  ┣ 📜 next.config.ts       # Next.js configuration
