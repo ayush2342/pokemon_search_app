@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Pokémon Search App**  
+A Pokémon search application built with **Next.js (App Router)** and **Tailwind CSS**, utilizing the PokeAPI to allow users to search for Pokémon by name and filter them by type.
 
-## Getting Started
+---
 
-First, run the development server:
+## **🚀 Features**
+✔ **Search Pokémon by Name**  
+✔ **Filter Pokémon by Type**  
+✔ **Dynamic Pokémon Cards Display**  
+✔ **Click a Pokémon to View Detailed Stats**  
+✔ **Breadcrumb Navigation (Home → Pokémon Name)**  
+✔ **Responsive & Mobile-Friendly Design**  
+✔ **Server-Side Rendering (SSR) for Performance**  
 
-```bash
+---
+
+## **🛠️ Tech Stack**
+- **Frontend:** Next.js (App Router), Tailwind CSS  
+- **Data Fetching:** PokeAPI (`https://pokeapi.co/api/v2/`)  
+- **State Management:** React hooks (`useState`, `useEffect`)  
+- **Routing:** Dynamic Routes (`/pokemon/[name]`)  
+- **Code Structure:** Custom hooks for clean separation  
+
+---
+
+## **📂 Folder Structure**
+```
+📦 POKEMON_SEARCH_APP
+ ┣ 📂 .next                # Build files
+ ┣ 📂 app
+ ┃ ┣ 📂 [pokemonName]      # Dynamic Pokémon details page
+ ┃ ┃ ┣ 📜 page.tsx         # Individual Pokémon details page
+ ┃ ┣ 📜 favicon.ico        # App icon
+ ┃ ┣ 📜 globals.css        # Global styles
+ ┃ ┣ 📜 layout.tsx         # Root layout component
+ ┃ ┣ 📜 page.tsx           # Home page (Search & Filter Pokémon)
+ ┣ 📂 components           # Reusable UI components
+ ┃ ┣ 📜 Breadcrumb.tsx     # Breadcrumb navigation
+ ┃ ┣ 📜 PokemonCard.tsx    # Pokémon Card component
+ ┃ ┣ 📜 PokemonDetails.tsx # Pokémon details component
+ ┃ ┣ 📜 PokemonList.tsx    # List of Pokémon displayed
+ ┃ ┣ 📜 SearchForm.tsx     # Search and filter form
+ ┣ 📂 hooks
+ ┃ ┣ 📜 usePokemon.ts      # Custom hook for Pokémon API calls
+ ┣ 📂 node_modules         # Dependencies
+ ┣ 📂 public               # Static assets
+ ┣ 📂 types
+ ┃ ┣ 📜 pokemon.ts         # TypeScript types for Pokémon
+ ┣ 📂 utils
+ ┃ ┣ 📜 api.ts             # API functions for fetching data
+ ┣ 📜 .gitignore           # Files ignored by Git
+ ┣ 📜 next-env.d.ts        # TypeScript environment variables
+ ┣ 📜 next.config.ts       # Next.js configuration
+ ┣ 📜 package-lock.json    # Package version tracking
+ ┣ 📜 package.json         # Dependencies and scripts
+ ┣ 📜 postcss.config.js    # Tailwind/PostCSS configuration
+ ┣ 📜 postcss.config.mjs   # Additional PostCSS settings
+ ┣ 📜 README.md            # Project documentation
+ ┣ 📜 tailwind.config.js   # Tailwind CSS configuration
+ ┣ 📜 tsconfig.json        # TypeScript configuration
+```
+
+---
+
+## **🔧 Installation & Setup**
+1️⃣ **Clone the repository**  
+
+git clone https://github.com/yourusername/pokemon-search-app.git
+cd pokemon-search-app
+```
+  
+2️⃣ **Install dependencies**  
+
+npm install
+# or
+yarn install
+```
+
+3️⃣ **Start the development server**  
+
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+  
+4️⃣ **Open in browser**  
+Go to `http://localhost:3000`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## **📝 Usage**
+### **🔹 Home Page (`/`)**
+- **Select Pokémon Type** (Dropdown to filter Pokémon by type)  
+- **Search Pokémon by Name** (Input field for filtering Pokémon)  
+- **Pokémon Cards** (Click a Pokémon to view details)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **🔹 Pokémon Details Page (`/pokemon/[name]`)**
+- Displays detailed Pokémon info (**image, stats, abilities, moves**)  
+- **Breadcrumb Navigation** (Example: `Home → Pikachu`)  
+- **Back Button** to return to the home page  
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## **📌 Key Techniques Used**
+✅ **Server & Client Components** - Optimized rendering for performance  
+✅ **Custom Hooks (`usePokemon.ts`)** - Clean data fetching logic  
+✅ **Server-Side Rendering (SSR)** - Faster initial page loads  
+✅ **Server Actions** - Efficient data fetching on user interaction  
+✅ **Dynamic Routing (`/pokemon/[name]`)** - Each Pokémon has a unique page  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## **🛠️ Next Steps**
+- ✅ **Improve UI with Animations**  
+- ✅ **Add Pagination for Pokémon List**  
+- ✅ **Cache API Responses for Faster Load Times**  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **🤝 Contributing**
+1. Fork the repository  
+2. Create a feature branch (`git checkout -b feature-branch`)  
+3. Commit your changes (`git commit -m "Add feature"`)  
+4. Push to the branch (`git push origin feature-branch`)  
+5. Open a Pull Request  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## **📜 License**
+This project is **open-source** and available under the **MIT License**.
